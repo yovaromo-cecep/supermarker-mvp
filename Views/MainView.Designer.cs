@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            BtnExit = new Button();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
@@ -37,16 +38,33 @@
             // 
             // panel1
             // 
+            panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtnPayMode);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 450);
+            panel1.Size = new Size(200, 497);
             panel1.TabIndex = 0;
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackColor = SystemColors.ButtonFace;
+            BtnExit.BackgroundImage = Properties.Resources.salida;
+            BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnExit.Dock = DockStyle.Bottom;
+            BtnExit.ImageAlign = ContentAlignment.BottomCenter;
+            BtnExit.Location = new Point(0, 394);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new Size(200, 103);
+            BtnExit.TabIndex = 2;
+            BtnExit.TextAlign = ContentAlignment.BottomCenter;
+            BtnExit.UseVisualStyleBackColor = false;
             // 
             // BtnPayMode
             // 
+            BtnPayMode.BackColor = SystemColors.ButtonFace;
             BtnPayMode.BackgroundImage = Properties.Resources.buy2;
             BtnPayMode.BackgroundImageLayout = ImageLayout.Zoom;
             BtnPayMode.ImageAlign = ContentAlignment.BottomCenter;
@@ -55,7 +73,7 @@
             BtnPayMode.Size = new Size(200, 103);
             BtnPayMode.TabIndex = 1;
             BtnPayMode.TextAlign = ContentAlignment.BottomCenter;
-            BtnPayMode.UseVisualStyleBackColor = true;
+            BtnPayMode.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -71,8 +89,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 497);
             Controls.Add(panel1);
+            IsMdiContainer = true;
             Name = "MainView";
             Text = "Supermarker";
             WindowState = FormWindowState.Maximized;
@@ -86,5 +105,6 @@
         private Panel panel1;
         private Button BtnPayMode;
         private PictureBox pictureBox1;
+        private Button BtnExit;
     }
 }
